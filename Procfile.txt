@@ -1,1 +1,0 @@
-web: java -war /tmp/build_28704f65/target/portfolio-1.0.0-BUILD-SNAPSHOT.war
