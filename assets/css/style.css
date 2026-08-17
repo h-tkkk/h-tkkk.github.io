@@ -582,6 +582,8 @@ section { position: relative; padding: 120px 0; }
 }
 .footer .brand { font-size: 14px; }
 .footer-links { display: flex; gap: 20px; }
+.footer-links { row-gap: 8px; }
+.footer-links a { white-space: nowrap; }
 .footer-links a { transition: color .2s ease; }
 .footer-links a:hover { color: var(--text); }
 
@@ -610,4 +612,16 @@ section { position: relative; padding: 120px 0; }
   .hero-stats { gap: 28px; }
   .contact-card { padding: 52px 26px; }
   .nav-cta { display: none; }
+
+  .connector { flex-direction: column; gap: 10px; padding: 10px 0; text-align: center; }
+  .connector .line { width: 56px; }
+
+  .footer { text-align: center; }
+  .footer .container { flex-direction: column; gap: 16px !important; }
+  .footer-links { flex-wrap: wrap; justify-content: center; row-gap: 8px; }
+}
+
+@media (max-width: 420px) {
+  .journal-tag { align-self: flex-start; }
+  .hero-stats { row-gap: 20px; }
 }
