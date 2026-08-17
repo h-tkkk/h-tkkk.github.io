@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="칼퇴랩스 로고">
+  <defs>
+    <linearGradient id="markGrad" x1="4" y1="4" x2="60" y2="60" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2dd4e8"/>
+      <stop offset="0.55" stop-color="#8b7bf7"/>
+      <stop offset="1" stop-color="#ff8a5c"/>
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="16" fill="#0b0f1a"/>
+  <rect x="2" y="2" width="60" height="60" rx="16" fill="url(#markGrad)" fill-opacity="0.92"/>
+  <path d="M18 24 L32 40 L46 24" fill="none" stroke="#f5f7fb" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
