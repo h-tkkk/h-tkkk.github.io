@@ -13,14 +13,34 @@
   --text-dim: #9aa3ba;
   --text-faint: #5b6377;
 
-  --dive: #2dd4e8;
-  --dive-2: #7ff0f7;
-  --tempo: #ffb84d;
-  --tempo-2: #ff8a5c;
-  --hotfix: #c084fc;
-  --hotfix-2: #f472b6;
+  /* real in-app brand colors, pulled from each codebase */
+  --dive: #1b6de0;        /* DIVE — "Dive Blue" */
+  --dive-2: #5ab2ff;
+  --dive-deep: #0c3b73;
+  --dive-focus: #03121f;  /* DIVE focus-mode background */
 
-  --brand-grad: linear-gradient(120deg, var(--dive) 0%, #8b7bf7 50%, var(--tempo) 100%);
+  --tempo: #c8ff44;       /* TEMPO — launch-screen lime */
+  --tempo-2: #1f2530;     /* TEMPO ink navy (text on lime) */
+  --tempo-bg: #fbfbfd;
+  --tempo-bg-2: #ececf2;
+  --tempo-blue: #3d7dff;
+  --tempo-pink: #ff4ba8;
+  --tempo-orange: #ff7a38;
+  --tempo-purple: #9d62ff;
+  --tempo-yellow: #ffe261;
+  --tempo-mint: #5ef2b3;
+
+  --hotfix: #00e5ff;      /* HOTFIX — terminal cyan */
+  --hotfix-2: #39ff14;    /* terminal green */
+  --hotfix-pink: #ff007f;
+  --hotfix-bg: #0d0d0d;
+  --hotfix-card: #171717;
+  --hotfix-line: #242424;
+
+  --brand-grad: linear-gradient(120deg, var(--dive-2) 0%, var(--hotfix) 45%, var(--tempo) 100%);
+  --font-mono: "Fira Code", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --font-mono-tempo: "DM Mono", ui-monospace, monospace;
+  --font-round: "Nunito", "Pretendard", -apple-system, sans-serif;
 
   --ease: cubic-bezier(.16, 1, .3, 1);
   --container: 1120px;
@@ -304,7 +324,7 @@ section { position: relative; padding: 120px 0; }
   color: var(--text-dim); border: 1px solid var(--border); text-transform: uppercase;
 }
 .status-live { color: #7cf5b0; border-color: rgba(124,245,176,.35); background: rgba(124,245,176,.08); }
-.status-beta { color: var(--tempo-2); border-color: color-mix(in srgb, var(--tempo) 45%, transparent); background: color-mix(in srgb, var(--tempo) 10%, transparent); }
+.status-beta { color: #ffc266; border-color: rgba(255,194,102,.4); background: rgba(255,194,102,.1); }
 
 .service-content h3 { font-size: clamp(1.4rem, 2.4vw, 1.85rem); font-weight: 800; letter-spacing: -.015em; line-height: 1.3; }
 .service-content > p.desc { color: var(--text-dim); font-size: .98rem; }
@@ -367,6 +387,165 @@ section { position: relative; padding: 120px 0; }
 .mock-meta .mock-bar { height: 6px; }
 .mock-pill { font-size: 10px; font-weight: 700; padding: 3px 8px; border-radius: 100px; color: #05070d; background: var(--accent-2); flex: none; }
 
+/* ---------- real app icon badge ---------- */
+.badge-icon.has-img { background: none; border: none; padding: 0; overflow: hidden; }
+.badge-icon.has-img img { width: 100%; height: 100%; border-radius: 9px; }
+
+/* ================================================================
+   DIVE — light "clear the list" card stacked on a dark focus ring
+   ================================================================ */
+.mock-dive { display: flex; flex-direction: column; gap: 14px; width: 100%; max-width: 300px; }
+.mock-dive-list {
+  border-radius: 16px; background: #f6f7f9; border: 1px solid rgba(255,255,255,.06);
+  padding: 14px; display: flex; flex-direction: column; gap: 8px;
+  box-shadow: 0 20px 40px -20px rgba(0,0,0,.5);
+}
+.mock-dive-list .mdrow { display: flex; align-items: center; gap: 9px; padding: 7px 8px; border-radius: 9px; }
+.mock-dive-list .mdrow.struck span { text-decoration: line-through; color: #9aa1ac; }
+.mock-dive-list .mdcheck { width: 16px; height: 16px; border-radius: 5px; border: 1.5px solid var(--dive); flex: none; position: relative; }
+.mock-dive-list .mdcheck.on { background: var(--dive); }
+.mock-dive-list .mdcheck.on::after { content: ""; position: absolute; inset: 0; margin: auto; width: 8px; height: 5px; border-left: 2px solid #fff; border-bottom: 2px solid #fff; transform: translateY(-1px) rotate(-45deg); }
+.mock-dive-list span { font-size: 12.5px; color: #2a2f38; font-weight: 500; }
+.mock-arrow-down {
+  align-self: center; width: 1px; height: 20px;
+  background: repeating-linear-gradient(var(--dive-2) 0 4px, transparent 4px 8px);
+}
+.mock-dive-focus {
+  border-radius: 16px; background: radial-gradient(circle at 50% 0%, var(--dive-deep), var(--dive-focus) 75%);
+  padding: 22px; display: flex; flex-direction: column; align-items: center; gap: 10px;
+  border: 1px solid rgba(90,178,255,.25);
+}
+.mock-dive-focus .df-ring {
+  width: 96px; height: 96px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  background: conic-gradient(var(--dive-2) 0deg, var(--dive-2) 250deg, rgba(255,255,255,.1) 250deg);
+  animation: ringspin 7s var(--ease) infinite alternate;
+}
+.mock-dive-focus .df-ring b { background: var(--dive-focus); width: 76px; height: 76px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 800; color: #eaf3ff; }
+.mock-dive-focus .df-label { font-size: 11px; color: #7fa9d8; letter-spacing: .04em; }
+
+/* ================================================================
+   TEMPO — bright, playful takeover (real app is a LIGHT app)
+   ================================================================ */
+.service--tempo {
+  background: linear-gradient(155deg, var(--tempo-bg) 0%, var(--tempo-bg-2) 100%);
+  border-color: rgba(31,37,48,.1);
+}
+.service--tempo .service-visual {
+  background: radial-gradient(circle at 30% 15%, color-mix(in srgb, var(--tempo) 55%, transparent), transparent 65%), var(--tempo-bg-2);
+  border-right-color: rgba(31,37,48,.08);
+}
+.service--tempo:nth-child(even) .service-visual { border-left-color: rgba(31,37,48,.08); }
+.service--tempo .service-badge { color: color-mix(in srgb, var(--tempo-2) 88%, black); font-family: var(--font-round); font-weight: 900; letter-spacing: -.01em; }
+.service--tempo .status-beta { color: #97640d; border-color: rgba(151,100,13,.3); background: rgba(200,255,68,.5); }
+.service--tempo .status-live { color: #0f8a4d; border-color: rgba(15,138,77,.3); background: rgba(15,138,77,.12); }
+.service--tempo .badge-icon { background: color-mix(in srgb, var(--tempo) 55%, transparent); border-color: color-mix(in srgb, var(--tempo-2) 25%, transparent); }
+.service--tempo .badge-icon svg { stroke: var(--tempo-2); }
+.service--tempo h3 { color: var(--tempo-2); font-family: var(--font-round); letter-spacing: -.02em; }
+.service--tempo p.desc { color: #4b5261; }
+.service--tempo .feature-list li { color: #4b5261; }
+.service--tempo .feature-list li b { color: var(--tempo-2); }
+.service--tempo .feature-list li svg { stroke: color-mix(in srgb, var(--tempo-2) 70%, var(--tempo)); }
+.service--tempo .service-note { color: #7b8291; font-family: var(--font-round); font-weight: 700; }
+.service--tempo .btn-accent {
+  background: var(--tempo); border-color: color-mix(in srgb, var(--tempo-2) 20%, transparent);
+  color: var(--tempo-2); font-family: var(--font-round); font-weight: 800;
+}
+.service--tempo .btn-accent:hover { background: color-mix(in srgb, var(--tempo) 85%, white); box-shadow: 0 14px 30px -10px color-mix(in srgb, var(--tempo) 60%, transparent); }
+
+.tempo-stack { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+.tempo-dots { display: flex; gap: 7px; justify-content: center; margin-bottom: 0; }
+.tempo-dots span {
+  width: 11px; height: 11px; border-radius: 50%;
+  animation: dotbounce 1.6s var(--ease) infinite;
+}
+.tempo-dots span:nth-child(1) { background: var(--tempo-blue); animation-delay: 0s; }
+.tempo-dots span:nth-child(2) { background: var(--tempo-pink); animation-delay: .12s; }
+.tempo-dots span:nth-child(3) { background: var(--tempo-orange); animation-delay: .24s; }
+.tempo-dots span:nth-child(4) { background: var(--tempo-purple); animation-delay: .36s; }
+.tempo-dots span:nth-child(5) { background: var(--tempo-mint); animation-delay: .48s; }
+.tempo-dots span:nth-child(6) { background: var(--tempo-yellow); animation-delay: .6s; }
+@keyframes dotbounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
+
+.mock-tempo { width: 100%; max-width: 300px; }
+.mock-tempo .mock { background: #fff; border-color: rgba(31,37,48,.08); box-shadow: 0 20px 44px -18px rgba(31,37,48,.28); }
+.mock-tempo .mock-row { background: rgba(31,37,48,.035); }
+.mock-tempo .mock-time { color: #8790a0; font-family: var(--font-mono-tempo); }
+.mock-tempo .mock-block { font-family: var(--font-round); font-weight: 800; color: var(--tempo-2); background: var(--tempo); }
+.mock-tempo .mock-block.col-blue { background: var(--tempo-blue); color: #fff; }
+.mock-tempo .mock-block.col-lime { background: var(--tempo); color: var(--tempo-2); }
+.mock-tempo .mock-block.col-orange { background: var(--tempo-orange); color: #fff; }
+.mock-tempo .mock-block.ghost { background: transparent; border-color: rgba(31,37,48,.15); color: #a3aab6; }
+
+.tempo-logo { display: flex; flex-direction: column; gap: 8px; width: 74px; }
+.tempo-logo span {
+  height: 15px; border-radius: 8px; background: var(--tempo-2);
+  animation: jelly 2.4s var(--ease) infinite;
+}
+.tempo-logo span:nth-child(1) { width: 100%; animation-delay: 0s; }
+.tempo-logo span:nth-child(2) { width: 58%; animation-delay: .15s; }
+.tempo-logo span:nth-child(3) { width: 100%; animation-delay: .3s; }
+@keyframes jelly { 0%, 100% { transform: scaleX(1); } 50% { transform: scaleX(1.08); } }
+
+/* ================================================================
+   HOTFIX — terminal takeover
+   ================================================================ */
+.service--hotfix {
+  background: linear-gradient(180deg, var(--hotfix-bg), #070707);
+  border-color: var(--hotfix-line);
+  font-family: var(--font-mono);
+}
+.service--hotfix .service-visual { background: radial-gradient(circle at 30% 20%, rgba(0,229,255,.10), transparent 60%), #0a0a0a; border-right-color: var(--hotfix-line); }
+.service--hotfix:nth-child(even) .service-visual { border-left-color: var(--hotfix-line); }
+.service--hotfix .service-badge { color: var(--hotfix); text-shadow: 0 0 18px rgba(0,229,255,.35); font-family: var(--font-mono); letter-spacing: .02em; }
+.service--hotfix .badge-icon { background: rgba(0,229,255,.12); border-color: rgba(0,229,255,.4); }
+.service--hotfix h3 { letter-spacing: -.01em; color: #eafffb; }
+.service--hotfix h3::before { content: "> "; color: var(--hotfix-2); font-family: var(--font-mono); }
+.service--hotfix p.desc { font-family: "Pretendard", sans-serif; color: #9fb0ab; }
+.service--hotfix .feature-list li { font-family: var(--font-mono); font-size: .86rem; color: #8fa39c; }
+.service--hotfix .feature-list li b { color: var(--hotfix-2); font-weight: 600; }
+.service--hotfix .feature-list li svg { display: none; }
+.service--hotfix .feature-list li::before { content: "$"; color: var(--hotfix-2); font-weight: 600; }
+.service--hotfix .btn-accent { font-family: var(--font-mono); }
+.service--hotfix .service-note { font-family: var(--font-mono); color: #5a6a63; }
+
+/* fake terminal window */
+.term {
+  width: 100%; max-width: 320px; border-radius: 10px; overflow: hidden;
+  background: #0c0f0d; border: 1px solid var(--hotfix-line); box-shadow: 0 24px 50px -20px rgba(0,229,255,.15);
+  font-family: var(--font-mono);
+}
+.term-bar { display: flex; align-items: center; gap: 6px; padding: 9px 12px; background: #131615; border-bottom: 1px solid #1c211f; }
+.term-dot { width: 9px; height: 9px; border-radius: 50%; }
+.term-dot.r { background: #c0404a; } .term-dot.y { background: #c0a020; } .term-dot.g { background: #39ff14; }
+.term-title { flex: 1; text-align: center; font-size: 10.5px; color: #5a6a63; letter-spacing: .02em; }
+.term-live { font-size: 9px; color: var(--hotfix-2); }
+.term-body { padding: 16px 15px 18px; font-size: 12px; line-height: 1.85; color: #9fb0ab; min-height: 148px; }
+.term-line .prompt { color: var(--hotfix-2); }
+.term-line .path { color: #5a6a63; }
+.term-out { color: #c8d8cc; }
+.term-out b { color: var(--hotfix-2); font-weight: 600; }
+.term-cursor { display: inline-block; width: 7px; height: 13px; background: var(--hotfix-2); margin-left: 2px; vertical-align: middle; animation: blink 1s steps(1) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+.scanlines {
+  position: absolute; inset: 0; pointer-events: none; opacity: .5; mix-blend-mode: overlay;
+  background: repeating-linear-gradient(0deg, rgba(0,229,255,.05) 0px, transparent 1px, transparent 3px);
+}
+
+/* ---------- journal / 읽을거리 ---------- */
+.journal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.journal-card {
+  border: 1px solid var(--border); border-radius: 22px; padding: 30px 28px; background: var(--surface);
+  display: flex; flex-direction: column; gap: 14px; transition: transform .4s var(--ease), border-color .4s var(--ease);
+}
+.journal-card:hover { transform: translateY(-4px); border-color: rgba(255,255,255,.22); }
+.journal-num { font-family: var(--font-mono); font-size: 12px; color: var(--text-faint); }
+.journal-card h3 { font-size: 1.12rem; font-weight: 800; letter-spacing: -.015em; line-height: 1.4; }
+.journal-card p { font-size: .89rem; color: var(--text-dim); line-height: 1.75; }
+.journal-tag {
+  align-self: flex-start; font-size: 10.5px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase;
+  padding: 4px 10px; border-radius: 100px; border: 1px solid var(--border);
+}
+
 /* ---------- philosophy ---------- */
 .philosophy { background: linear-gradient(180deg, transparent, var(--bg-elevated) 20%, var(--bg-elevated) 80%, transparent); }
 .philosophy-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
@@ -412,7 +591,10 @@ section { position: relative; padding: 120px 0; }
   .nav-toggle { display: flex; }
   .service, .service:nth-child(even) { grid-template-columns: 1fr; }
   .service-visual, .service:nth-child(even) .service-visual { order: -1; border: none; border-bottom: 1px solid var(--border-soft); }
+  .service--tempo .service-visual, .service--tempo:nth-child(even) .service-visual { border-bottom-color: rgba(31,37,48,.08); }
+  .service--hotfix .service-visual, .service--hotfix:nth-child(even) .service-visual { border-bottom-color: var(--hotfix-line); }
   .philosophy-grid { grid-template-columns: 1fr; gap: 40px; }
+  .journal-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 560px) {

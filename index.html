@@ -8,7 +8,10 @@
 <meta name="theme-color" content="#05070d">
 <link rel="icon" type="image/svg+xml" href="assets/img/mark.svg">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Nunito:wght@600;700;800;900&family=DM+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="assets/css/style.css">
 
 <meta property="og:title" content="칼퇴랩스 | Kaltoe Labs">
@@ -87,22 +90,20 @@
 
   <div class="marquee" aria-hidden="true">
     <div class="marquee-track">
+      <span style="color:var(--dive-2)">DIVE</span><span class="dot">·</span>
       <span>DEEP WORK</span><span class="dot">·</span>
+      <span style="color:var(--tempo)">TEMPO</span><span class="dot">·</span>
       <span>TIME BLOCK</span><span class="dot">·</span>
+      <span style="color:var(--hotfix)">HOTFIX</span><span class="dot">·</span>
       <span>QA 품앗이</span><span class="dot">·</span>
-      <span>얕은 집중을 넘어</span><span class="dot">·</span>
-      <span>깊은 몰입으로</span><span class="dot">·</span>
-      <span>DIVE</span><span class="dot">·</span>
-      <span>TEMPO</span><span class="dot">·</span>
-      <span>HOTFIX</span><span class="dot">·</span>
+      <span>얕은 집중을 넘어, 깊은 몰입으로</span><span class="dot">·</span>
+      <span style="color:var(--dive-2)">DIVE</span><span class="dot">·</span>
       <span>DEEP WORK</span><span class="dot">·</span>
+      <span style="color:var(--tempo)">TEMPO</span><span class="dot">·</span>
       <span>TIME BLOCK</span><span class="dot">·</span>
+      <span style="color:var(--hotfix)">HOTFIX</span><span class="dot">·</span>
       <span>QA 품앗이</span><span class="dot">·</span>
-      <span>얕은 집중을 넘어</span><span class="dot">·</span>
-      <span>깊은 몰입으로</span><span class="dot">·</span>
-      <span>DIVE</span><span class="dot">·</span>
-      <span>TEMPO</span><span class="dot">·</span>
-      <span>HOTFIX</span><span class="dot">·</span>
+      <span>얕은 집중을 넘어, 깊은 몰입으로</span><span class="dot">·</span>
     </div>
   </div>
 
@@ -118,21 +119,24 @@
       <div class="service-list">
 
         <!-- DIVE -->
-        <article class="service reveal" style="--accent:var(--dive); --accent-2:var(--dive-2)" id="dive">
+        <article class="service reveal service--dive" style="--accent:var(--dive); --accent-2:var(--dive-2)" id="dive">
           <div class="service-visual">
-            <div class="mock">
-              <div class="mock-row"><span class="mock-check done"></span><span class="mock-bar"><span></span></span><span class="mock-time">25m</span></div>
-              <div class="mock-row"><span class="mock-check"></span><span class="mock-bar"><span style="animation-delay:.3s"></span></span><span class="mock-time">40m</span></div>
-              <div class="mock-row"><span class="mock-check"></span><span class="mock-bar"><span style="animation-delay:.6s"></span></span><span class="mock-time">15m</span></div>
-              <div class="mock-timer" style="margin-top:16px;">
-                <div class="mock-ring"><b>25:00</b></div>
-                <span class="mock-caption">딥워크 집중 타이머</span>
+            <div class="mock-dive">
+              <div class="mock-dive-list">
+                <div class="mdrow struck"><span class="mdcheck on"></span><span>기획서 초안 정리</span></div>
+                <div class="mdrow struck"><span class="mdcheck on"></span><span>디자인 피드백 반영</span></div>
+                <div class="mdrow"><span class="mdcheck"></span><span>다음 스프린트 계획</span></div>
+              </div>
+              <div class="mock-arrow-down"></div>
+              <div class="mock-dive-focus">
+                <div class="df-ring"><b>25:00</b></div>
+                <span class="df-label">DEEP WORK · 몰입 중</span>
               </div>
             </div>
           </div>
           <div class="service-content">
             <div class="service-badge">
-              <span class="badge-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12c2-3 4-3 6 0s4 3 6 0 4-3 6 0M4 18c2-3 4-3 6 0s4 3 6 0 4-3 6 0"/></svg></span>
+              <span class="badge-icon has-img"><img src="assets/img/dive-icon.png" alt="" width="30" height="30"></span>
               DIVE
               <span class="status status-live">App Store 출시</span>
             </div>
@@ -157,21 +161,27 @@
         </div>
 
         <!-- TEMPO -->
-        <article class="service reveal" style="--accent:var(--tempo); --accent-2:var(--tempo-2)" id="tempo">
+        <article class="service reveal service--tempo" style="--accent:var(--tempo); --accent-2:var(--tempo-2)" id="tempo">
           <div class="service-visual">
-            <div class="mock">
-              <div class="mock-blocks">
-                <div class="mock-row"><span class="mock-time">09:00</span><span class="mock-block" style="flex:1">기획 리뷰</span></div>
-                <div class="mock-row"><span class="mock-time">09:30</span><span class="mock-block ghost" style="flex:1">비어있음</span></div>
-                <div class="mock-row"><span class="mock-time">10:00</span><span class="mock-block" style="flex:1">딥워크 블록</span></div>
-                <div class="mock-row"><span class="mock-time">10:45</span><span class="mock-block" style="flex:1;opacity:.75">코드 리뷰</span></div>
-                <div class="mock-row"><span class="mock-time">11:15</span><span class="mock-block ghost" style="flex:1">15분 여유</span></div>
+            <div class="tempo-stack">
+              <div class="tempo-logo" aria-hidden="true"><span></span><span></span><span></span></div>
+              <div class="tempo-dots" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+              <div class="mock-tempo">
+                <div class="mock">
+                  <div class="mock-blocks">
+                    <div class="mock-row"><span class="mock-time">09:00</span><span class="mock-block col-blue" style="flex:1">기획 리뷰</span></div>
+                    <div class="mock-row"><span class="mock-time">09:30</span><span class="mock-block ghost" style="flex:1">비어있음</span></div>
+                    <div class="mock-row"><span class="mock-time">10:00</span><span class="mock-block col-lime" style="flex:1">딥워크 블록</span></div>
+                    <div class="mock-row"><span class="mock-time">10:45</span><span class="mock-block col-orange" style="flex:1">코드 리뷰</span></div>
+                    <div class="mock-row"><span class="mock-time">11:15</span><span class="mock-block ghost" style="flex:1">15분 여유</span></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
           <div class="service-content">
             <div class="service-badge">
-              <span class="badge-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span>
+              <span class="badge-icon has-img"><img src="assets/img/tempo-icon.png" alt="" width="30" height="30"></span>
               TEMPO
               <span class="status status-beta">비공개 베타 진행중</span>
             </div>
@@ -197,20 +207,29 @@
         </div>
 
         <!-- HOTFIX -->
-        <article class="service reveal" style="--accent:var(--hotfix); --accent-2:var(--hotfix-2)" id="hotfix">
+        <article class="service reveal service--hotfix" style="--accent:var(--hotfix); --accent-2:var(--hotfix-2)" id="hotfix">
           <div class="service-visual">
-            <div class="mock">
-              <div class="mock-feed">
-                <div class="mock-card"><span class="mock-avatar"></span><span class="mock-meta"><span class="mock-bar" style="width:70%"><span></span></span><span class="mock-bar" style="width:40%"><span></span></span></span><span class="mock-pill">퀘스트</span></div>
-                <div class="mock-card"><span class="mock-avatar"></span><span class="mock-meta"><span class="mock-bar"><span></span></span><span class="mock-bar" style="width:55%"><span></span></span></span><span class="mock-pill">채택</span></div>
-                <div class="mock-card"><span class="mock-avatar"></span><span class="mock-meta"><span class="mock-bar"><span></span></span><span class="mock-bar" style="width:65%"><span></span></span></span><span class="mock-pill">피드백</span></div>
+            <div class="scanlines" aria-hidden="true"></div>
+            <div class="term">
+              <div class="term-bar">
+                <span class="term-dot r"></span><span class="term-dot y"></span><span class="term-dot g"></span>
+                <span class="term-title">secret_quest.sh</span>
+                <span class="term-live">● LIVE</span>
+              </div>
+              <div class="term-body">
+                <div class="term-line"><span class="prompt">hotfix@labs</span><span class="path">:~$</span> <span class="term-typed" data-text="./run_daily_quest.sh"></span><span class="term-cursor"></span></div>
+                <div class="term-out" style="margin-top:12px;">
+                  [OK] 시크릿 퀘스트 매칭 완료<br>
+                  [OK] 20명 비공개 테스터 조건 충족<br>
+                  &gt; 리워드 <b>+30 Volt</b> 지급됨
+                </div>
               </div>
             </div>
           </div>
           <div class="service-content">
             <div class="service-badge">
-              <span class="badge-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v2M12 19v2M5 5l1.5 1.5M17.5 17.5 19 19M3 12h2M19 12h2M5 19l1.5-1.5M17.5 6.5 19 5"/><rect x="8" y="8" width="8" height="10" rx="4"/></svg></span>
-              핫픽스
+              <span class="badge-icon has-img"><img src="assets/img/hotfix-icon.png" alt="" width="30" height="30"></span>
+              HOTFIX
               <span class="status status-beta">비공개 베타 진행중</span>
             </div>
             <h3>1인 개발자를 위한 품앗이 QA 플랫폼</h3>
@@ -229,6 +248,37 @@
           </div>
         </article>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= JOURNAL / 읽을거리 ================= -->
+  <section id="journal" class="journal">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Kaltoe Journal</p>
+        <h2>만들면서 든 생각들</h2>
+        <p class="section-sub">세 개의 서비스를 만들고 운영하면서 남긴 짧은 기록</p>
+      </div>
+      <div class="journal-grid">
+        <article class="journal-card reveal reveal-1">
+          <span class="journal-num">01</span>
+          <span class="journal-tag">Product</span>
+          <h3>왜 서비스를 셋으로 나눴을까</h3>
+          <p>할 일을 비우는 일과, 그 일을 시간 위에 배치하는 일은 서로 다른 종류의 집중을 요구했습니다. DIVE는 머릿속을 빠르게 정리하는 데, TEMPO는 그 목록을 현실적인 하루로 바꾸는 데 집중합니다. 그래서 두 앱은 따로 만들었지만, DIVE의 할 일이 TEMPO의 인박스로 자연스럽게 이어지도록 연결해뒀습니다.</p>
+        </article>
+        <article class="journal-card reveal reveal-2">
+          <span class="journal-num">02</span>
+          <span class="journal-tag">Engineering</span>
+          <h3>온디바이스를 고집하는 이유</h3>
+          <p>DIVE와 TEMPO는 로그인 없이도 전체 기능을 쓸 수 있고, 데이터는 우선 기기 안 로컬 데이터베이스에 저장됩니다. 서버가 느려질 걱정도, 서비스가 사라질 걱정도 그만큼 줄어듭니다. 계정을 강제하는 대신, 필요한 사람에게만 조용히 최소한의 동기화를 제공하는 방식을 고민하고 있습니다.</p>
+        </article>
+        <article class="journal-card reveal reveal-3">
+          <span class="journal-num">03</span>
+          <span class="journal-tag">Story</span>
+          <h3>혼자 만들지만, 혼자 쓰지 않기 위해</h3>
+          <p>HOTFIX는 DIVE와 TEMPO를 출시하며 겪은 문제에서 시작됐습니다. 구글 플레이는 정식 출시 전 14일 동안 20명의 비공개 테스터를 요구하는데, 1인 개발자에게는 이 20명을 모으는 일 자체가 큰 장벽입니다. HOTFIX는 그 장벽을 서로의 앱을 테스트해주는 품앗이로 풀어보려는 시도입니다.</p>
+        </article>
       </div>
     </div>
   </section>

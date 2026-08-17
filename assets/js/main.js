@@ -57,6 +57,25 @@
     panel.querySelectorAll('a').forEach((a) => a.addEventListener('click', closeMenu));
   }
 
+  /* ---------- terminal typing effect (HOTFIX) ---------- */
+  document.querySelectorAll('.term-typed').forEach((el, idx) => {
+    const text = el.getAttribute('data-text') || '';
+    if (reduceMotion) { el.textContent = text; return; }
+    let i = 0;
+    const speed = 55;
+    const pause = 2200;
+    const tick = () => {
+      el.textContent = text.slice(0, i);
+      i += 1;
+      if (i <= text.length) {
+        setTimeout(tick, speed);
+      } else {
+        setTimeout(() => { i = 0; tick(); }, pause);
+      }
+    };
+    setTimeout(tick, 400 + idx * 150);
+  });
+
   if (reduceMotion) return;
 
   /* ---------- cursor glow ---------- */
@@ -70,7 +89,7 @@
 
   /* ---------- tilt on service visuals ---------- */
   document.querySelectorAll('.service-visual').forEach((card) => {
-    const inner = card.querySelector('.mock');
+    const inner = card.querySelector('.mock, .mock-dive, .term');
     if (!inner) return;
     card.addEventListener('pointermove', (e) => {
       const r = card.getBoundingClientRect();
