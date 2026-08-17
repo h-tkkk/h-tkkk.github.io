@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="1200" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#05070d"/>
+      <stop offset="1" stop-color="#080a14"/>
+    </linearGradient>
+    <radialGradient id="blobBlue" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(220 260) scale(430)">
+      <stop offset="0" stop-color="#1B6DE0" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#1B6DE0" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="blobCyan" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(760 220) scale(360)">
+      <stop offset="0" stop-color="#00E5FF" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#00E5FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="blobLime" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(980 980) scale(430)">
+      <stop offset="0" stop-color="#C8FF44" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#C8FF44" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="markGrad" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2dd4e8"/>
+      <stop offset="0.55" stop-color="#8b7bf7"/>
+      <stop offset="1" stop-color="#ff8a5c"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0" y1="0" x2="620" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#5ab2ff"/>
+      <stop offset="0.5" stop-color="#00e5ff"/>
+      <stop offset="1" stop-color="#c8ff44"/>
+    </linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#ffffff" stroke-opacity="0.035"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="1200" fill="url(#bg)"/>
+  <rect width="1200" height="1200" fill="url(#blobBlue)"/>
+  <rect width="1200" height="1200" fill="url(#blobCyan)"/>
+  <rect width="1200" height="1200" fill="url(#blobLime)"/>
+  <rect width="1200" height="1200" fill="url(#grid)" opacity="0.5"/>
+
+  <!-- brand mark -->
+  <g transform="translate(150,300)">
+    <rect width="88" height="88" rx="23" fill="#0b0f1a"/>
+    <rect width="88" height="88" rx="23" fill="url(#markGrad)" fill-opacity="0.92"/>
+    <path d="M26 36 L44 56 L62 36" fill="none" stroke="#f5f7fb" stroke-width="8.8" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="264" y="345" font-family="-apple-system, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif" font-size="42" font-weight="800" fill="#f5f7fb" letter-spacing="-0.5">칼퇴랩스</text>
+  <text x="264" y="384" font-family="-apple-system, 'Apple SD Gothic Neo', sans-serif" font-size="21" font-weight="600" fill="#7d879e" letter-spacing="1.5">KALTOE LABS</text>
+
+  <!-- headline -->
+  <text x="150" y="560" font-family="-apple-system, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif" font-size="72" font-weight="800" fill="#f5f7fb" letter-spacing="-2">얕은 집중을 넘어,</text>
+  <text x="150" y="652" font-family="-apple-system, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif" font-size="72" font-weight="800" fill="url(#titleGrad)" letter-spacing="-2">깊은 몰입의 바다로.</text>
+
+  <text x="150" y="726" font-family="-apple-system, 'Apple SD Gothic Neo', sans-serif" font-size="27" fill="#9aa3ba">하루의 시간을 되찾아주는 도구를 만드는 1인 개발 스튜디오</text>
+
+  <!-- product chips -->
+  <g font-family="-apple-system, 'Apple SD Gothic Neo', sans-serif" font-size="23" font-weight="700">
+    <rect x="150" y="790" width="150" height="58" rx="29" fill="#ffffff" fill-opacity="0.06" stroke="#5ab2ff" stroke-opacity="0.5"/>
+    <circle cx="182" cy="819" r="6.5" fill="#5ab2ff"/>
+    <text x="202" y="827" fill="#eaf3ff">DIVE</text>
+
+    <rect x="316" y="790" width="176" height="58" rx="29" fill="#ffffff" fill-opacity="0.06" stroke="#c8ff44" stroke-opacity="0.5"/>
+    <circle cx="348" cy="819" r="6.5" fill="#c8ff44"/>
+    <text x="368" y="827" fill="#f2ffd4">TEMPO</text>
+
+    <rect x="508" y="790" width="192" height="58" rx="29" fill="#ffffff" fill-opacity="0.06" stroke="#00e5ff" stroke-opacity="0.5"/>
+    <circle cx="540" cy="819" r="6.5" fill="#00e5ff"/>
+    <text x="560" y="827" fill="#d9fbff">HOTFIX</text>
+  </g>
+
+  <text x="150" y="940" font-family="-apple-system, 'Apple SD Gothic Neo', sans-serif" font-size="23" fill="#5b6377">kaltoelabs.com</text>
+</svg>
