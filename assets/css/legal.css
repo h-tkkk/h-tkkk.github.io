@@ -1,0 +1,188 @@
+/* ==========================================================================
+   칼퇴랩스 — 개인정보처리방침 / 고객지원 공통 스타일
+   (각 앱 페이지는 <body data-app="dive|tempo|hotfix">로 강조색을 바꿉니다)
+   ========================================================================== */
+
+:root {
+  --bg: #05070d;
+  --surface: rgba(255, 255, 255, 0.045);
+  --border: rgba(255, 255, 255, 0.1);
+  --text: #f5f7fb;
+  --text-dim: #9aa3ba;
+  --text-faint: #6a728a;
+
+  --dive: #1b6de0;
+  --dive-2: #5ab2ff;
+  --tempo: #c8ff44;
+  --hotfix: #00e5ff;
+
+  --accent: var(--dive);
+}
+
+body[data-app="tempo"]  { --accent: var(--tempo); }
+body[data-app="hotfix"] { --accent: var(--hotfix); }
+
+* { box-sizing: border-box; }
+
+html { color-scheme: dark; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Malgun Gothic", sans-serif;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ---- header ---- */
+.legal-header {
+  border-bottom: 1px solid var(--border);
+  padding: 22px 0;
+}
+.legal-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.brand-link {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  font-size: 15px;
+}
+.brand-link span {
+  color: var(--text-faint);
+  font-weight: 600;
+  margin-left: 6px;
+}
+.back-link {
+  color: var(--text-dim);
+  text-decoration: none;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.back-link:hover { color: var(--text); }
+
+/* ---- doc nav (tabs) ---- */
+.doc-nav {
+  display: flex;
+  gap: 4px;
+  padding: 14px 0 0;
+  flex-wrap: wrap;
+}
+.doc-nav a {
+  color: var(--text-dim);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 7px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+}
+.doc-nav a[aria-current="page"] {
+  color: #05070d;
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+/* ---- hero ---- */
+.page-hero {
+  padding: 40px 0 8px;
+}
+.eyebrow {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin: 0 0 10px;
+}
+h1 {
+  font-size: clamp(26px, 5vw, 34px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0 0 10px;
+}
+.meta {
+  color: var(--text-faint);
+  font-size: 13.5px;
+  margin: 0;
+}
+
+/* ---- prose ---- */
+main { padding-bottom: 80px; }
+.prose { padding-top: 20px; }
+.prose h2 {
+  font-size: 17px;
+  font-weight: 700;
+  margin: 34px 0 10px;
+  padding-top: 4px;
+  border-top: 1px solid var(--border);
+}
+.prose h2:first-child { border-top: none; margin-top: 22px; }
+.prose p, .prose li {
+  color: var(--text-dim);
+  font-size: 15px;
+}
+.prose ul { padding-left: 20px; margin: 10px 0; }
+.prose li { margin-bottom: 8px; }
+.prose li strong, .prose p strong { color: var(--text); font-weight: 700; }
+.prose a { color: var(--accent); }
+
+.card-list { display: grid; gap: 10px; margin: 14px 0; }
+.card {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 14px;
+  padding: 14px 16px;
+}
+.card strong { color: var(--text); font-weight: 700; display: block; margin-bottom: 4px; font-size: 14px; }
+.card span { color: var(--text-dim); font-size: 14px; }
+
+.table-wrap { overflow-x: auto; margin: 14px 0; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); color: var(--text-dim); }
+th { color: var(--text); font-weight: 700; white-space: nowrap; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+.btn-accent {
+  background: var(--accent);
+  color: #05070d;
+  border-color: var(--accent);
+}
+.page-actions { display: flex; gap: 10px; margin-top: 18px; flex-wrap: wrap; }
+
+.faq { margin: 10px 0 24px; }
+.faq > div { padding: 16px 0; border-bottom: 1px solid var(--border); }
+.faq > div:first-child { padding-top: 0; }
+.faq h3 { font-size: 15px; margin: 0 0 6px; font-weight: 700; }
+.faq p { margin: 0; }
+
+.legal-footer {
+  border-top: 1px solid var(--border);
+  padding: 22px 0 40px;
+  color: var(--text-faint);
+  font-size: 13px;
+}
