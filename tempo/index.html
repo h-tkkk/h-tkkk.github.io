@@ -4,25 +4,20 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>TEMPO | 칼퇴랩스</title>
-<meta name="description" content="할 일을 15분 타임블록 위에 올려 오늘을 현실적으로 계획하는 플래너. App Store와 Google Play에서 받을 수 있습니다.">
+<meta name="description" content="할 일을 15분 칸에 붙여 오늘을 현실적으로 계획한다. App Store와 Google Play에서 받는다.">
 <meta name="theme-color" content="#fbfbfd">
 <link rel="canonical" href="https://kaltoelabs.com/tempo/">
 <link rel="icon" type="image/png" href="../assets/img/tempo-icon.png">
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&amp;display=swap">
 <link rel="stylesheet" href="../assets/css/style.css">
 <meta property="og:title" content="TEMPO | 칼퇴랩스">
-<meta property="og:description" content="할 일을 시간으로, 하루를 내 편으로.">
+<meta property="og:description" content="할 일을 15분 칸에 붙인다.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://kaltoelabs.com/tempo/">
 <meta property="og:image" content="https://kaltoelabs.com/assets/img/og-image.jpg">
 </head>
 <body class="page-tempo">
-
-<div class="noise" aria-hidden="true"></div>
 
 <header class="nav" id="nav">
   <div class="container nav-inner">
@@ -34,14 +29,11 @@
       <a href="/dive/">다이브</a>
       <a href="/tempo/" class="is-current">TEMPO</a>
       <a href="/hotfix/">핫픽스</a>
-      <a href="/#contact">문의</a>
+      <a href="/#contact">메일</a>
     </nav>
-    <div style="display:flex; align-items:center; gap:10px;">
-      <a href="/#contact" class="nav-cta">문의</a>
-      <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
 
@@ -49,89 +41,81 @@
   <a href="/dive/">다이브</a>
   <a href="/tempo/" class="is-current">TEMPO</a>
   <a href="/hotfix/">핫픽스</a>
-  <a href="/#contact">문의</a>
+  <a href="/#contact">메일</a>
 </div>
 
 <main>
   <section class="page-hero">
     <div class="container page-hero-grid">
       <div>
-        <p class="eyebrow reveal">TEMPO</p>
-        <h1 class="reveal reveal-1">할 일을 시간으로, 하루를 내 편으로</h1>
-        <p class="lead reveal reveal-2">적기만 해서는 하루가 바뀌지 않습니다. 15분 격자 위에 붙이면 오늘이 보입니다.</p>
+        <p class="page-label reveal">TEMPO</p>
+        <h1 class="reveal reveal-1">할 일을 15분 칸에 붙인다</h1>
+        <p class="lead reveal reveal-2">적기만 해서는 오늘 몇 시에 무엇을 할지 모른다. TEMPO는 일을 15분 칸에 붙이고, 하루가 넘치면 겹침을 알려 준다.</p>
         <div class="store-row reveal reveal-3">
           <div class="store-pair">
             <a class="store-badge" href="https://apps.apple.com/kr/app/id6801160634" target="_blank" rel="noopener">
               <img src="../assets/img/badge-app-store.svg" width="130" height="40" alt="App Store에서 다운로드">
             </a>
-            <figure class="store-qr">
-              <img src="../assets/img/qr-tempo.svg" width="108" height="108" alt="">
-              <figcaption>카메라로 열기</figcaption>
-            </figure>
+            <img class="store-qr" src="../assets/img/qr-tempo.svg" width="108" height="108" alt="TEMPO App Store QR">
           </div>
           <div class="store-pair">
             <a class="store-badge store-badge--play" href="https://play.google.com/store/apps/details?id=com.kaltoelabs.tempo" target="_blank" rel="noopener">
               <img src="../assets/img/badge-google-play.png" width="135" height="40" alt="Google Play에서 다운로드">
             </a>
-            <figure class="store-qr">
-              <img src="../assets/img/qr-tempo-play.svg" width="108" height="108" alt="">
-              <figcaption>카메라로 열기</figcaption>
-            </figure>
+            <img class="store-qr" src="../assets/img/qr-tempo-play.svg" width="108" height="108" alt="TEMPO Google Play QR">
           </div>
         </div>
       </div>
       <div class="page-hero-visual reveal">
-        <div class="phone phone--light">
-          <img src="../assets/img/shots/tempo/today.jpg" width="240" height="520" alt="오늘 타임라인">
-        </div>
+        <img class="shot shot-lg" src="../assets/img/shots/tempo/today.jpg" width="240" height="520" alt="오늘 타임라인">
       </div>
     </div>
   </section>
 
-  <section class="features">
+  <section class="specs">
     <div class="container">
-      <div class="feature-grid">
-        <article class="feature reveal">
-          <h3>15분 타임블록</h3>
-          <p>해야 할 일을 실제 시간 위에 올려, 오늘 소화할 수 있는 만큼만 계획합니다.</p>
-        </article>
-        <article class="feature reveal reveal-1">
-          <h3>과부하를 바로 알림</h3>
-          <p>하루가 빠듯해지면 겹침과 과부하를 알려 조정을 돕습니다.</p>
-        </article>
-        <article class="feature reveal reveal-2">
-          <h3>DIVE에서 이어짐</h3>
-          <p>다이브의 할 일을 인박스로 가져와 타임라인에 붙일 수 있습니다.</p>
-        </article>
-      </div>
+      <dl class="spec-list">
+        <div class="spec reveal">
+          <dt>15분 격자</dt>
+          <dd>해야 할 일을 실제 시간 위에 올려, 오늘 소화할 수 있는 양만 남긴다.</dd>
+        </div>
+        <div class="spec reveal reveal-1">
+          <dt>과부하</dt>
+          <dd>하루가 빠듯해지면 겹침과 과부하를 바로 보여 준다.</dd>
+        </div>
+        <div class="spec reveal reveal-2">
+          <dt>DIVE 인박스</dt>
+          <dd>같은 계정으로 연결하면 다이브 할 일이 인박스로 들어온다.</dd>
+        </div>
+      </dl>
     </div>
   </section>
 
   <section class="shots">
     <div class="container">
-      <div class="shot-grid">
+      <div class="shot-grid shot-grid--six">
         <figure class="shot-item reveal">
-          <div class="phone phone--light"><img src="../assets/img/shots/tempo/today.jpg" width="220" height="476" alt="오늘 타임라인"></div>
-          <figcaption>오늘 타임라인</figcaption>
+          <img class="shot" src="../assets/img/shots/tempo/today.jpg" width="220" height="476" alt="오늘 타임라인">
+          <figcaption>오늘</figcaption>
         </figure>
         <figure class="shot-item reveal reveal-1">
-          <div class="phone phone--light"><img src="../assets/img/shots/tempo/inbox.jpg" width="220" height="476" alt="인박스"></div>
+          <img class="shot" src="../assets/img/shots/tempo/inbox.jpg" width="220" height="476" alt="인박스">
           <figcaption>인박스</figcaption>
         </figure>
         <figure class="shot-item reveal reveal-2">
-          <div class="phone phone--light"><img src="../assets/img/shots/tempo/week.jpg" width="220" height="476" alt="주간"></div>
+          <img class="shot" src="../assets/img/shots/tempo/week.jpg" width="220" height="476" alt="주간">
           <figcaption>주간</figcaption>
         </figure>
         <figure class="shot-item reveal">
-          <div class="phone phone--light"><img src="../assets/img/shots/tempo/overload.jpg" width="220" height="476" alt="과부하"></div>
+          <img class="shot" src="../assets/img/shots/tempo/overload.jpg" width="220" height="476" alt="과부하">
           <figcaption>과부하</figcaption>
         </figure>
         <figure class="shot-item reveal reveal-1">
-          <div class="phone phone--light"><img src="../assets/img/shots/tempo/review.jpg" width="220" height="476" alt="리뷰"></div>
+          <img class="shot" src="../assets/img/shots/tempo/review.jpg" width="220" height="476" alt="리뷰">
           <figcaption>리뷰</figcaption>
         </figure>
         <figure class="shot-item reveal reveal-2">
-          <div class="phone phone--light"><img src="../assets/img/shots/tempo/settings.jpg" width="220" height="476" alt="설정"></div>
+          <img class="shot" src="../assets/img/shots/tempo/settings.jpg" width="220" height="476" alt="설정">
           <figcaption>설정</figcaption>
         </figure>
       </div>
@@ -140,19 +124,18 @@
 
   <section class="page-cta">
     <div class="container">
-      <div class="page-cta-card reveal">
-        <h2>오늘을 15분에 붙이기</h2>
-        <div class="store-row">
-          <a class="btn btn-lime" href="https://apps.apple.com/kr/app/id6801160634" target="_blank" rel="noopener">App Store</a>
-          <a class="btn btn-lime" href="https://play.google.com/store/apps/details?id=com.kaltoelabs.tempo" target="_blank" rel="noopener">Google Play</a>
-          <figure class="store-qr">
-            <img src="../assets/img/qr-tempo.svg" width="108" height="108" alt="">
-            <figcaption>카메라로 열기</figcaption>
-          </figure>
-          <figure class="store-qr">
-            <img src="../assets/img/qr-tempo-play.svg" width="108" height="108" alt="">
-            <figcaption>카메라로 열기</figcaption>
-          </figure>
+      <div class="page-cta-row reveal">
+        <div class="store-pair">
+          <a class="store-badge" href="https://apps.apple.com/kr/app/id6801160634" target="_blank" rel="noopener">
+            <img src="../assets/img/badge-app-store.svg" width="130" height="40" alt="App Store에서 다운로드">
+          </a>
+          <img class="store-qr" src="../assets/img/qr-tempo.svg" width="108" height="108" alt="TEMPO App Store QR">
+        </div>
+        <div class="store-pair">
+          <a class="store-badge store-badge--play" href="https://play.google.com/store/apps/details?id=com.kaltoelabs.tempo" target="_blank" rel="noopener">
+            <img src="../assets/img/badge-google-play.png" width="135" height="40" alt="Google Play에서 다운로드">
+          </a>
+          <img class="store-qr" src="../assets/img/qr-tempo-play.svg" width="108" height="108" alt="TEMPO Google Play QR">
         </div>
       </div>
     </div>
@@ -160,7 +143,7 @@
 </main>
 
 <footer class="footer">
-  <div class="container" style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px;">
+  <div class="container footer-inner">
     <span class="brand">칼퇴랩스 <span class="brand-en">© 2026 Kaltoe Labs</span></span>
     <div class="footer-links">
       <a href="privacy.html">개인정보처리방침</a>

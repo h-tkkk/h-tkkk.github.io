@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>다이브 | 칼퇴랩스</title>
-<meta name="description" content="생각을 빠르게 비우고 딥워크에 잠수하는 할 일 앱. 계정과 광고 없이 기기 안에만 보관합니다.">
+<meta name="description" content="오늘 할 일만 남긴 다음 딥워크 타이머를 켠다. 계정과 광고 없이 데이터는 기기에만 둔다.">
 <meta name="theme-color" content="#05070d">
 <link rel="canonical" href="https://kaltoelabs.com/dive/">
 <link rel="icon" type="image/png" href="../assets/img/dive-icon.png">
@@ -12,14 +12,12 @@
 <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
 <link rel="stylesheet" href="../assets/css/style.css">
 <meta property="og:title" content="다이브 | 칼퇴랩스">
-<meta property="og:description" content="생각을 비우고, 한 가지에 잠수한다.">
+<meta property="og:description" content="오늘 할 일만 남긴다.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://kaltoelabs.com/dive/">
 <meta property="og:image" content="https://kaltoelabs.com/assets/img/og-image.jpg">
 </head>
 <body class="page-dive">
-
-<div class="noise" aria-hidden="true"></div>
 
 <header class="nav" id="nav">
   <div class="container nav-inner">
@@ -31,14 +29,11 @@
       <a href="/dive/" class="is-current">다이브</a>
       <a href="/tempo/">TEMPO</a>
       <a href="/hotfix/">핫픽스</a>
-      <a href="/#contact">문의</a>
+      <a href="/#contact">메일</a>
     </nav>
-    <div style="display:flex; align-items:center; gap:10px;">
-      <a href="/#contact" class="nav-cta">문의</a>
-      <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
 
@@ -46,52 +41,51 @@
   <a href="/dive/" class="is-current">다이브</a>
   <a href="/tempo/">TEMPO</a>
   <a href="/hotfix/">핫픽스</a>
-  <a href="/#contact">문의</a>
+  <a href="/#contact">메일</a>
 </div>
 
 <main>
   <section class="page-hero">
     <div class="container page-hero-grid">
       <div>
-        <p class="eyebrow reveal">DIVE</p>
-        <h1 class="reveal reveal-1">생각을 비우고, 한 가지에 잠수한다</h1>
-        <p class="lead reveal reveal-2">오늘 할 일만 남기고, 딥워크 타이머로 깊게 들어갑니다. 계정과 광고 없이 모든 데이터는 기기 안에만 있습니다.</p>
+        <p class="page-label reveal">DIVE</p>
+        <h1 class="reveal reveal-1">오늘 할 일만 남긴다</h1>
+        <p class="lead reveal reveal-2">할 일이 쌓인 채로 집중 타이머를 켜면 결국 목록으로 돌아온다. 다이브는 오늘 할 일만 보이게 한 다음, 25·50·90분 타이머로 들어간다. 로그인도 광고도 없다.</p>
         <div class="store-row reveal reveal-3">
           <div class="store-pair">
             <a class="store-badge" href="https://apps.apple.com/kr/app/id6795819553" target="_blank" rel="noopener">
               <img src="../assets/img/badge-app-store.svg" width="130" height="40" alt="App Store에서 다운로드">
             </a>
-            <figure class="store-qr">
-              <img src="../assets/img/qr-dive.svg" width="108" height="108" alt="">
-              <figcaption>카메라로 열기</figcaption>
-            </figure>
+            <img class="store-qr" src="../assets/img/qr-dive.svg" width="108" height="108" alt="다이브 App Store QR">
           </div>
         </div>
       </div>
       <div class="page-hero-visual reveal">
-        <div class="phone">
-          <img class="shot-light" src="../assets/img/shots/dive/today.jpg" width="240" height="521" alt="오늘 목록">
-        </div>
+        <img class="shot shot-light shot-lg" src="../assets/img/shots/dive/today.jpg" width="240" height="521" alt="오늘 목록">
       </div>
     </div>
   </section>
 
-  <section class="features">
+  <section class="specs">
     <div class="container">
-      <div class="feature-grid">
-        <article class="feature reveal">
-          <h3>할 일 + 딥워크</h3>
-          <p>목록을 비운 뒤, 25·50·90분 잠수 타이머로 한 가지에만 집중합니다.</p>
-        </article>
-        <article class="feature reveal reveal-1">
-          <h3>캘린더는 읽기만</h3>
-          <p>기기 캘린더를 오늘 화면에 겹쳐 보여 줍니다. 일정은 저장하거나 보내지 않습니다.</p>
-        </article>
-        <article class="feature reveal reveal-2">
-          <h3>온디바이스</h3>
-          <p>계정도 광고도 없습니다. 할 일과 집중 기록은 이 기기 안에만 남습니다.</p>
-        </article>
-      </div>
+      <dl class="spec-list">
+        <div class="spec reveal">
+          <dt>오늘 목록</dt>
+          <dd>영역과 저녁 할 일을 나눠, 지금 볼 일만 남긴다.</dd>
+        </div>
+        <div class="spec reveal reveal-1">
+          <dt>딥워크 타이머</dt>
+          <dd>25·50·90분. 화면을 엎어 두면 흐르는 하드코어 모드가 있다.</dd>
+        </div>
+        <div class="spec reveal reveal-2">
+          <dt>캘린더는 읽기만</dt>
+          <dd>기기 캘린더를 오늘 화면에 겹쳐 보여 준다. 일정은 저장하거나 보내지 않는다.</dd>
+        </div>
+        <div class="spec reveal">
+          <dt>온디바이스</dt>
+          <dd>계정도 광고도 없다. 할 일과 집중 기록은 이 기기에만 남는다.</dd>
+        </div>
+      </dl>
     </div>
   </section>
 
@@ -99,25 +93,25 @@
     <div class="container">
       <div class="shot-grid">
         <figure class="shot-item reveal">
-          <div class="phone"><img class="shot-light" src="../assets/img/shots/dive/home.jpg" width="220" height="478" alt="홈"></div>
+          <img class="shot shot-light" src="../assets/img/shots/dive/home.jpg" width="220" height="478" alt="홈">
           <figcaption>홈</figcaption>
         </figure>
         <figure class="shot-item reveal reveal-1">
-          <div class="phone"><img class="shot-light" src="../assets/img/shots/dive/today.jpg" width="220" height="478" alt="오늘 목록"></div>
+          <img class="shot shot-light" src="../assets/img/shots/dive/today.jpg" width="220" height="478" alt="오늘 목록">
           <figcaption>오늘 목록</figcaption>
         </figure>
         <figure class="shot-item reveal reveal-2">
-          <div class="phone"><img src="../assets/img/shots/dive/deep-work.jpg" width="220" height="478" alt="딥워크"></div>
+          <img class="shot" src="../assets/img/shots/dive/deep-work.jpg" width="220" height="478" alt="딥워크">
           <figcaption>딥워크</figcaption>
         </figure>
       </div>
       <div class="watch-row">
         <figure class="shot-item reveal">
-          <div class="phone phone--watch"><img src="../assets/img/shots/dive/watch-today-list.png" width="128" height="153" alt="워치 오늘 목록"></div>
+          <img class="shot shot-watch" src="../assets/img/shots/dive/watch-today-list.png" width="128" height="153" alt="워치 오늘 목록">
           <figcaption>워치 오늘 목록</figcaption>
         </figure>
         <figure class="shot-item reveal reveal-1">
-          <div class="phone phone--watch"><img src="../assets/img/shots/dive/watch-timer-running.png" width="128" height="153" alt="워치 타이머 진행"></div>
+          <img class="shot shot-watch" src="../assets/img/shots/dive/watch-timer-running.png" width="128" height="153" alt="워치 타이머 진행">
           <figcaption>워치 타이머 진행</figcaption>
         </figure>
       </div>
@@ -126,18 +120,12 @@
 
   <section class="page-cta">
     <div class="container">
-      <div class="page-cta-card reveal">
-        <h2>오늘을 비우고 잠수하기</h2>
-        <div class="store-row">
-          <div class="store-pair">
-            <a class="store-badge" href="https://apps.apple.com/kr/app/id6795819553" target="_blank" rel="noopener">
-              <img src="../assets/img/badge-app-store.svg" width="130" height="40" alt="App Store에서 다운로드">
-            </a>
-            <figure class="store-qr">
-              <img src="../assets/img/qr-dive.svg" width="108" height="108" alt="">
-              <figcaption>카메라로 열기</figcaption>
-            </figure>
-          </div>
+      <div class="page-cta-row reveal">
+        <div class="store-pair">
+          <a class="store-badge" href="https://apps.apple.com/kr/app/id6795819553" target="_blank" rel="noopener">
+            <img src="../assets/img/badge-app-store.svg" width="130" height="40" alt="App Store에서 다운로드">
+          </a>
+          <img class="store-qr" src="../assets/img/qr-dive.svg" width="108" height="108" alt="다이브 App Store QR">
         </div>
       </div>
     </div>
@@ -145,7 +133,7 @@
 </main>
 
 <footer class="footer">
-  <div class="container" style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px;">
+  <div class="container footer-inner">
     <span class="brand">칼퇴랩스 <span class="brand-en">© 2026 Kaltoe Labs</span></span>
     <div class="footer-links">
       <a href="privacy.html">개인정보처리방침</a>
