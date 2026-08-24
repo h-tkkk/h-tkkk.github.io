@@ -73,31 +73,18 @@
         </h1>
         <p class="hero-sub reveal reveal-2">할 일만 적으면 하루는 안 바뀐다. 비우고, 15분으로 올려, 칼퇴한다.</p>
         <div class="hero-actions reveal reveal-3">
-          <div class="store-pair">
-            <a class="store-badge" href="https://apps.apple.com/kr/app/id6795819553" target="_blank" rel="noopener">
-              <img src="assets/img/badge-app-store.svg" width="130" height="40" alt="다이브 — App Store에서 다운로드">
-            </a>
-            <figure class="store-qr">
-              <img src="assets/img/qr-dive.svg" width="108" height="108" alt="">
-              <figcaption>카메라로 열기</figcaption>
-            </figure>
-          </div>
-          <div class="store-pair">
-            <a class="store-badge" href="https://apps.apple.com/kr/app/id6801160634" target="_blank" rel="noopener">
-              <img src="assets/img/badge-app-store.svg" width="130" height="40" alt="TEMPO — App Store에서 다운로드">
-            </a>
-            <figure class="store-qr">
-              <img src="assets/img/qr-tempo.svg" width="108" height="108" alt="">
-              <figcaption>카메라로 열기</figcaption>
-            </figure>
-          </div>
+          <a class="btn btn-primary" href="#products">앱 보러 가기</a>
         </div>
       </div>
 
       <div class="ritual reveal" id="ritual">
         <div class="ritual-pane">
           <p class="ritual-kicker">DIVE · 오늘</p>
-          <div class="ritual-task">기획서 초안</div>
+          <button type="button" class="ritual-task" id="ritualTask" aria-pressed="false">
+            <span class="ritual-check" aria-hidden="true"></span>
+            <span>기획서 초안</span>
+          </button>
+          <p class="ritual-hint" id="ritualHint">탭해서 완료해보세요</p>
         </div>
         <div class="ritual-pane ritual-pane--tempo">
           <p class="ritual-kicker">TEMPO · 15분</p>
@@ -132,7 +119,7 @@
             </div>
           </div>
           <h2>생각을 비우고, 한 가지에 잠수한다</h2>
-          <p class="product-desc">할 일을 빠르게 비우고 딥워크 타이머로 몰입하는 앱. 계정과 광고 없이, 데이터는 기기 안에만 둡니다.</p>
+          <p class="product-desc">할 일을 빠르게 비우고 딥워크 타이머로 몰입하는 앱. 계정도 광고도 없이, 데이터는 기기 안에만 둡니다.</p>
           <div class="store-row">
             <div class="store-pair">
               <a class="store-badge" href="https://apps.apple.com/kr/app/id6795819553" target="_blank" rel="noopener">
@@ -151,7 +138,7 @@
           <div class="product-badge">
             <img src="assets/img/tempo-icon.png" alt="" width="30" height="30">
             TEMPO
-            <span class="status status-live">App Store</span>
+            <span class="status status-live">App Store · Google Play</span>
           </div>
           <div class="product-visual">
             <div class="phone phone--light">
@@ -161,11 +148,24 @@
           <h2>할 일을 15분 위에 올린다</h2>
           <p class="product-desc">다이브에서 비운 일을 TEMPO 인박스로 가져와 타임라인에 붙이면, 하루가 현실적인 시간표가 됩니다.</p>
           <div class="store-row">
-            <a class="btn btn-lime" href="https://apps.apple.com/kr/app/id6801160634" target="_blank" rel="noopener">App Store</a>
-            <figure class="store-qr">
-              <img src="assets/img/qr-tempo.svg" width="108" height="108" alt="">
-              <figcaption>카메라로 열기</figcaption>
-            </figure>
+            <div class="store-pair">
+              <a class="store-badge" href="https://apps.apple.com/kr/app/id6801160634" target="_blank" rel="noopener">
+                <img src="assets/img/badge-app-store.svg" width="130" height="40" alt="App Store에서 다운로드">
+              </a>
+              <figure class="store-qr">
+                <img src="assets/img/qr-tempo.svg" width="108" height="108" alt="">
+                <figcaption>카메라로 열기</figcaption>
+              </figure>
+            </div>
+            <div class="store-pair">
+              <a class="store-badge store-badge--play" href="https://play.google.com/store/apps/details?id=com.kaltoelabs.tempo" target="_blank" rel="noopener">
+                <img src="assets/img/badge-google-play.png" width="135" height="40" alt="Google Play에서 다운로드">
+              </a>
+              <figure class="store-qr">
+                <img src="assets/img/qr-tempo-play.svg" width="108" height="108" alt="">
+                <figcaption>카메라로 열기</figcaption>
+              </figure>
+            </div>
           </div>
           <a class="product-more" href="/tempo/">TEMPO 더 보기</a>
         </article>

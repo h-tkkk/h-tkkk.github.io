@@ -42,24 +42,43 @@
   }
 
   const ritual = document.getElementById('ritual');
-  if (!ritual) return;
+  const ritualTask = document.getElementById('ritualTask');
+  const ritualHint = document.getElementById('ritualHint');
+  if (!ritual || !ritualTask) return;
 
-  const play = () => ritual.classList.add('played');
+  const setChecked = (checked) => {
+    ritualTask.classList.toggle('checked', checked);
+    ritualTask.setAttribute('aria-pressed', String(checked));
+    ritual.classList.toggle('played', checked);
+    if (ritualHint) {
+      ritualHint.textContent = checked
+        ? 'TEMPO 15분에 붙었어요 · 다시 탭해보세요'
+        : '탭해서 완료해보세요';
+    }
+  };
+
+  ritualTask.addEventListener('click', () => {
+    setChecked(!ritualTask.classList.contains('checked'));
+  });
+
   if (reduceMotion) {
-    play();
+    setChecked(true);
     return;
   }
+
+  // one gentle auto-demo the first time it scrolls into view, so visitors
+  // notice it's interactive before they've clicked anything
   if ('IntersectionObserver' in window) {
     const rio = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          play();
+          setChecked(true);
           rio.disconnect();
         }
       });
     }, { threshold: 0.45 });
     rio.observe(ritual);
   } else {
-    play();
+    setChecked(true);
   }
 })();
