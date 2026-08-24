@@ -383,20 +383,20 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
 
 .specs { padding: 8px 0 48px; }
 .spec-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0;
+  display: flex;
+  flex-direction: column;
   border-top: 1px solid var(--border);
 }
-.spec-list--two { grid-template-columns: 1fr 1fr; }
 .spec {
-  padding: 20px 20px 20px 0;
+  display: grid;
+  grid-template-columns: 148px 1fr;
+  gap: 20px;
+  align-items: baseline;
+  padding: 18px 0;
   border-bottom: 1px solid var(--border);
 }
-.spec:nth-child(odd) { padding-right: 28px; }
-.spec:nth-child(even) { padding-left: 28px; border-left: 1px solid var(--border); }
-.spec dt { font-size: .98rem; font-weight: 650; margin-bottom: 6px; }
-.spec dd { font-size: .92rem; color: var(--text-dim); }
+.spec dt { font-size: .95rem; font-weight: 650; }
+.spec dd { font-size: .95rem; color: var(--text-dim); max-width: 52ch; }
 
 .shots { padding: 8px 0 56px; }
 .shot-grid {
@@ -447,8 +447,7 @@ body.page-tempo .mobile-panel a { color: #5b6377; }
 body.page-tempo .page-label { color: #7b8291; }
 body.page-tempo .lead { color: #4b5261; }
 body.page-tempo .spec-list,
-body.page-tempo .spec,
-body.page-tempo .spec:nth-child(even) { border-color: rgba(31,37,48,.1); }
+body.page-tempo .spec { border-color: rgba(31,37,48,.1); }
 body.page-tempo .spec dd { color: #4b5261; }
 body.page-tempo .shot { border-color: rgba(31,37,48,.08); }
 body.page-tempo .shot-item figcaption,
@@ -464,19 +463,11 @@ body.page-tempo .page-cta-row { border-top-color: rgba(31,37,48,.08); }
   .nav-toggle { display: flex; }
   .hero-grid,
   .product-grid,
-  .page-hero-grid,
-  .spec-list,
-  .spec-list--two { grid-template-columns: 1fr; }
+  .page-hero-grid { grid-template-columns: 1fr; }
   .shot-grid,
   .shot-grid--six { grid-template-columns: 1fr 1fr; }
   .ritual { grid-template-columns: 1fr; }
   .hotfix-bar { flex-direction: column; align-items: flex-start; }
-  .spec:nth-child(odd),
-  .spec:nth-child(even) {
-    padding-left: 0;
-    padding-right: 0;
-    border-left: none;
-  }
 }
 
 @media (max-width: 640px) {
@@ -484,6 +475,7 @@ body.page-tempo .page-cta-row { border-top-color: rgba(31,37,48,.08); }
   .page-hero { padding-top: 104px; }
   .shot-grid,
   .shot-grid--six { grid-template-columns: 1fr; }
+  .spec { grid-template-columns: 1fr; gap: 6px; }
   .footer-inner { flex-direction: column; align-items: flex-start; gap: 16px; }
   .hero-actions { width: 100%; }
 }
