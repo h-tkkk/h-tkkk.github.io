@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>칼퇴랩스 | Kaltoe Labs</title>
-<meta name="description" content="칼퇴랩스는 하루의 시간을 되찾아주는 생산성 도구를 만드는 1인 개발 스튜디오입니다. 할 일 관리 앱 다이브, 타임블록 플래너 TEMPO, 인디 개발자 품앗이 QA 플랫폼 핫픽스를 운영하고 있습니다.">
+<meta name="description" content="할 일만 적으면 하루는 안 바뀐다. 다이브로 오늘을 비우고, TEMPO 15분에 붙여 칼퇴한다. 칼퇴랩스.">
 <meta name="theme-color" content="#05070d">
 <link rel="canonical" href="https://kaltoelabs.com/">
 <link rel="icon" type="image/svg+xml" href="assets/img/mark.svg">
@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="assets/css/style.css">
 
 <meta property="og:title" content="칼퇴랩스 | Kaltoe Labs">
-<meta property="og:description" content="얕은 집중을 넘어, 깊은 몰입의 바다로 — 다이브 · TEMPO · 핫픽스">
+<meta property="og:description" content="다이브로 오늘을 비우고, TEMPO 15분에 붙인다.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://kaltoelabs.com/">
 <meta property="og:site_name" content="칼퇴랩스">
@@ -25,27 +25,27 @@
 <meta property="og:image:height" content="1200">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="칼퇴랩스 | Kaltoe Labs">
-<meta name="twitter:description" content="얕은 집중을 넘어, 깊은 몰입의 바다로 — 다이브 · TEMPO · 핫픽스">
+<meta name="twitter:description" content="다이브로 오늘을 비우고, TEMPO 15분에 붙인다.">
 <meta name="twitter:image" content="https://kaltoelabs.com/assets/img/og-image.jpg">
 </head>
 <body>
 
 <div class="noise" aria-hidden="true"></div>
-<div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
 
 <header class="nav" id="nav">
   <div class="container nav-inner">
-    <a href="#home" class="brand">
+    <a href="/" class="brand">
       <span class="brand-mark"><img src="assets/img/mark.svg" alt="" width="30" height="30"></span>
       <span>칼퇴랩스<span class="brand-en">Kaltoe Labs</span></span>
     </a>
     <nav class="nav-links">
-      <a href="#services" data-nav>서비스</a>
-      <a href="#philosophy" data-nav>철학</a>
-      <a href="#contact" data-nav>문의</a>
+      <a href="/dive/">다이브</a>
+      <a href="/tempo/">TEMPO</a>
+      <a href="/hotfix/">핫픽스</a>
+      <a href="#contact">문의</a>
     </nav>
     <div style="display:flex; align-items:center; gap:10px;">
-      <a href="#contact" class="nav-cta">문의하기</a>
+      <a href="#contact" class="nav-cta">문의</a>
       <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -54,292 +54,193 @@
 </header>
 
 <div class="mobile-panel" id="mobilePanel">
-  <a href="#services">서비스</a>
-  <a href="#philosophy">철학</a>
+  <a href="/dive/">다이브</a>
+  <a href="/tempo/">TEMPO</a>
+  <a href="/hotfix/">핫픽스</a>
   <a href="#contact">문의</a>
 </div>
 
 <main>
 
-  <!-- ================= HERO ================= -->
-  <section id="home" class="hero">
-    <div class="hero-bg" aria-hidden="true">
-      <span class="blob blob-dive"></span>
-      <span class="blob blob-tempo"></span>
-      <span class="blob blob-hotfix"></span>
-      <div class="grid-overlay"></div>
-    </div>
-
-    <div class="hero-inner">
-      <p class="eyebrow reveal">Kaltoe Labs · 칼퇴랩스</p>
-      <h1 class="hero-title">
-        <span class="reveal reveal-1">얕은 집중을 넘어,</span>
-        <span class="reveal reveal-2 grad-text">깊은 몰입의 바다로.</span>
-      </h1>
-      <p class="hero-sub reveal reveal-3">
-        하루의 시간을 되찾아주는 도구를 만드는 1인 개발 스튜디오입니다.<br class="br-desktop">
-        다이브로 할 일을 비우고, TEMPO로 시간을 계획하고, 핫픽스로 더 나은 앱을 함께 만듭니다.
-      </p>
-      <div class="hero-actions reveal reveal-4">
-        <a href="#services" class="btn btn-primary">
-          서비스 둘러보기
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
-        </a>
-        <a href="#contact" class="btn btn-ghost">문의하기</a>
-      </div>
-
-      <div class="hero-stats reveal reveal-4">
-        <div class="stat"><strong>3</strong><span>운영중인 서비스</span></div>
-        <div class="stat"><strong>1인</strong><span>개발 스튜디오</span></div>
-        <div class="stat"><strong>iOS · Android · Web</strong><span>크로스플랫폼</span></div>
-      </div>
-    </div>
-
-    <div class="scroll-cue reveal"><span></span>Scroll</div>
-  </section>
-
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee-track">
-      <span style="color:var(--dive-2)">DIVE</span><span class="dot">·</span>
-      <span>DEEP WORK</span><span class="dot">·</span>
-      <span style="color:var(--tempo)">TEMPO</span><span class="dot">·</span>
-      <span>TIME BLOCK</span><span class="dot">·</span>
-      <span style="color:var(--hotfix)">HOTFIX</span><span class="dot">·</span>
-      <span>QA 품앗이</span><span class="dot">·</span>
-      <span>얕은 집중을 넘어, 깊은 몰입으로</span><span class="dot">·</span>
-      <span style="color:var(--dive-2)">DIVE</span><span class="dot">·</span>
-      <span>DEEP WORK</span><span class="dot">·</span>
-      <span style="color:var(--tempo)">TEMPO</span><span class="dot">·</span>
-      <span>TIME BLOCK</span><span class="dot">·</span>
-      <span style="color:var(--hotfix)">HOTFIX</span><span class="dot">·</span>
-      <span>QA 품앗이</span><span class="dot">·</span>
-      <span>얕은 집중을 넘어, 깊은 몰입으로</span><span class="dot">·</span>
-    </div>
-  </div>
-
-  <!-- ================= SERVICES ================= -->
-  <section id="services" class="services">
+  <section class="hero" id="home">
+    <div class="hero-wash" aria-hidden="true"></div>
     <div class="container">
-      <div class="section-head reveal">
-        <p class="eyebrow">Our Products</p>
-        <h2>지금 운영중인 서비스</h2>
-        <p class="section-sub">집중해서 일하고, 미련없이 칼퇴하기 위한 세 가지 도구</p>
+      <div class="hero-copy">
+        <p class="eyebrow reveal">Kaltoe Labs · 칼퇴랩스</p>
+        <h1 class="hero-title reveal reveal-1">
+          <span class="em-dive">다이브</span>로 오늘을 비우고,<br class="br-desktop">
+          <span class="em-tempo">TEMPO</span> 15분에 붙인다.
+        </h1>
+        <p class="hero-sub reveal reveal-2">할 일만 적으면 하루는 안 바뀐다. 비우고, 15분으로 올려, 칼퇴한다.</p>
+        <div class="hero-actions reveal reveal-3">
+          <div class="store-pair">
+            <a class="store-badge" href="https://apps.apple.com/kr/app/id6795819553" target="_blank" rel="noopener">
+              <img src="assets/img/badge-app-store.svg" width="130" height="40" alt="다이브 — App Store에서 다운로드">
+            </a>
+            <figure class="store-qr">
+              <img src="assets/img/qr-dive.svg" width="108" height="108" alt="">
+              <figcaption>카메라로 열기</figcaption>
+            </figure>
+          </div>
+          <div class="store-pair">
+            <a class="store-badge" href="https://apps.apple.com/kr/app/id6801160634" target="_blank" rel="noopener">
+              <img src="assets/img/badge-app-store.svg" width="130" height="40" alt="TEMPO — App Store에서 다운로드">
+            </a>
+            <figure class="store-qr">
+              <img src="assets/img/qr-tempo.svg" width="108" height="108" alt="">
+              <figcaption>카메라로 열기</figcaption>
+            </figure>
+          </div>
+        </div>
       </div>
 
-      <div class="service-list">
+      <div class="ritual reveal" id="ritual">
+        <div class="ritual-pane">
+          <p class="ritual-kicker">DIVE · 오늘</p>
+          <div class="ritual-task">기획서 초안</div>
+        </div>
+        <div class="ritual-pane ritual-pane--tempo">
+          <p class="ritual-kicker">TEMPO · 15분</p>
+          <div class="ritual-grid">
+            <div class="ritual-row"><time datetime="09:00">09:00</time><span class="ritual-block" aria-hidden="true"></span></div>
+            <div class="ritual-row">
+              <time datetime="09:15">09:15</time>
+              <div class="ritual-slot">
+                <div class="ritual-card">기획서 초안</div>
+              </div>
+            </div>
+            <div class="ritual-row"><time datetime="09:30">09:30</time><span class="ritual-block lime" aria-hidden="true"></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <!-- DIVE -->
-        <article class="service reveal service--dive" style="--accent:var(--dive); --accent-2:var(--dive-2)" id="dive">
-          <div class="service-visual">
-            <div class="mock-dive">
-              <div class="mock-dive-list">
-                <div class="mdrow struck"><span class="mdcheck on"></span><span>기획서 초안 정리</span></div>
-                <div class="mdrow struck"><span class="mdcheck on"></span><span>디자인 피드백 반영</span></div>
-                <div class="mdrow"><span class="mdcheck"></span><span>다음 스프린트 계획</span></div>
-              </div>
-              <div class="mock-arrow-down"></div>
-              <div class="mock-dive-focus">
-                <div class="df-ring"><b>25:00</b></div>
-                <span class="df-label">DEEP WORK · 몰입 중</span>
-              </div>
+  <section class="products" id="products">
+    <div class="container">
+      <div class="product-grid">
+
+        <article class="product-card product-card--dive reveal">
+          <div class="product-badge">
+            <img src="assets/img/dive-icon.png" alt="" width="30" height="30">
+            DIVE
+            <span class="status status-live">App Store</span>
+          </div>
+          <div class="product-visual">
+            <div class="phone">
+              <img class="shot-light" src="assets/img/shots/dive/today.jpg" width="220" height="478" alt="오늘 목록">
             </div>
           </div>
-          <div class="service-content">
-            <div class="service-badge">
-              <span class="badge-icon has-img"><img src="assets/img/dive-icon.png" alt="" width="30" height="30"></span>
-              DIVE
-              <span class="status status-live">App Store 출시</span>
-            </div>
-            <h3>얕은 집중을 넘어, 깊은 몰입의 바다로</h3>
-            <p class="desc">생각을 빠르게 비우고 중요한 일에 깊이 몰입하도록 돕는 할 일 관리 &amp; 딥워크 타이머 앱입니다. 계정과 광고 없이, 모든 데이터는 기기 안에만 보관됩니다.</p>
-            <ul class="feature-list">
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m9 12 2 2 4-4"/></svg><span><b>할 일 관리</b> + 딥워크 집중 타이머</span></li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m9 12 2 2 4-4"/></svg><span>Google Calendar <b>읽기 전용</b> 연동으로 일정 한눈에 확인</span></li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m9 12 2 2 4-4"/></svg><span><b>계정도, 광고도 없이</b> — 100% 온디바이스</span></li>
-            </ul>
-            <div class="service-links">
-              <a class="btn btn-accent btn-sm" href="https://apps.apple.com/kr/app/%EB%8B%A4%EC%9D%B4%EB%B8%8C-%ED%95%A0%EC%9D%BC-%EA%B4%80%EB%A6%AC-%ED%88%AC%EB%91%90%EB%A6%AC%EC%8A%A4%ED%8A%B8-%EC%9D%BC%EC%A0%95-%EB%A3%A8%ED%8B%B4/id6795819553" target="_blank" rel="noopener">
-                App Store에서 다운로드
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          <h2>생각을 비우고, 한 가지에 잠수한다</h2>
+          <p class="product-desc">할 일을 빠르게 비우고 딥워크 타이머로 몰입하는 앱. 계정과 광고 없이, 데이터는 기기 안에만 둡니다.</p>
+          <div class="store-row">
+            <div class="store-pair">
+              <a class="store-badge" href="https://apps.apple.com/kr/app/id6795819553" target="_blank" rel="noopener">
+                <img src="assets/img/badge-app-store.svg" width="130" height="40" alt="App Store에서 다운로드">
               </a>
-            </div>
-            <div class="doc-links">
-              <a href="dive/privacy.html">개인정보처리방침</a>
-              <a href="dive/support.html">고객지원</a>
+              <figure class="store-qr">
+                <img src="assets/img/qr-dive.svg" width="108" height="108" alt="">
+                <figcaption>카메라로 열기</figcaption>
+              </figure>
             </div>
           </div>
+          <a class="product-more" href="/dive/">다이브 더 보기</a>
         </article>
 
-        <div class="connector reveal">
-          <span class="line"></span> DIVE의 할 일이 TEMPO의 하루로 이어집니다 <span class="line"></span>
-        </div>
-
-        <!-- TEMPO -->
-        <article class="service reveal service--tempo" style="--accent:var(--tempo); --accent-2:var(--tempo-2)" id="tempo">
-          <div class="service-visual">
-            <div class="tempo-stack">
-              <div class="tempo-logo" aria-hidden="true"><span></span><span></span><span></span></div>
-              <div class="tempo-dots" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
-              <div class="mock-tempo">
-                <div class="mock">
-                  <div class="mock-blocks">
-                    <div class="mock-row"><span class="mock-time">09:00</span><span class="mock-block col-blue" style="flex:1">기획 리뷰</span></div>
-                    <div class="mock-row"><span class="mock-time">09:30</span><span class="mock-block ghost" style="flex:1">비어있음</span></div>
-                    <div class="mock-row"><span class="mock-time">10:00</span><span class="mock-block col-lime" style="flex:1">딥워크 블록</span></div>
-                    <div class="mock-row"><span class="mock-time">10:45</span><span class="mock-block col-orange" style="flex:1">코드 리뷰</span></div>
-                    <div class="mock-row"><span class="mock-time">11:15</span><span class="mock-block ghost" style="flex:1">15분 여유</span></div>
-                  </div>
-                </div>
-              </div>
+        <article class="product-card product-card--tempo reveal reveal-1">
+          <div class="product-badge">
+            <img src="assets/img/tempo-icon.png" alt="" width="30" height="30">
+            TEMPO
+            <span class="status status-live">App Store</span>
+          </div>
+          <div class="product-visual">
+            <div class="phone phone--light">
+              <img src="assets/img/shots/tempo/today.jpg" width="220" height="476" alt="오늘 타임라인">
             </div>
           </div>
-          <div class="service-content">
-            <div class="service-badge">
-              <span class="badge-icon has-img"><img src="assets/img/tempo-icon.png" alt="" width="30" height="30"></span>
-              TEMPO
-              <span class="status status-live">App Store 출시</span>
-            </div>
-            <h3>할 일을 시간으로, 하루를 내 편으로</h3>
-            <p class="desc">할 일을 적는 것만으로는 하루가 바뀌지 않으니까. TEMPO는 해야 할 일을 실제 시간 위에 올려, 오늘을 더 현실적으로 계획할 수 있도록 돕는 타임블록 플래너입니다. DIVE의 할 일을 인박스로 가져와 타임라인에 놓으면, 15분 단위로 시간을 맞춰줍니다.</p>
-            <ul class="feature-list">
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m9 12 2 2 4-4"/></svg><span>할 일을 <b>15분 단위 타임블록</b>으로 정확하게 계획</span></li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m9 12 2 2 4-4"/></svg><span>일정 과부하를 <b>바로 알려주고</b> 대안을 제안</span></li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m9 12 2 2 4-4"/></svg><span><b>DIVE와 자연스럽게 연결</b>되는 할 일 → 시간표 흐름</span></li>
-            </ul>
-            <div class="service-links">
-              <a class="btn btn-accent btn-sm" href="https://apps.apple.com/kr/app/tempo-%ED%83%80%EC%9E%84%EB%B8%94%EB%A1%9D-%ED%94%8C%EB%9E%98%EB%84%88/id6801160634" target="_blank" rel="noopener">
-                App Store에서 다운로드
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
-              </a>
-            </div>
-            <div class="doc-links">
-              <a href="tempo/privacy.html">개인정보처리방침</a>
-              <a href="tempo/support.html">고객지원</a>
-            </div>
+          <h2>할 일을 15분 위에 올린다</h2>
+          <p class="product-desc">다이브에서 비운 일을 TEMPO 인박스로 가져와 타임라인에 붙이면, 하루가 현실적인 시간표가 됩니다.</p>
+          <div class="store-row">
+            <a class="btn btn-lime" href="https://apps.apple.com/kr/app/id6801160634" target="_blank" rel="noopener">App Store</a>
+            <figure class="store-qr">
+              <img src="assets/img/qr-tempo.svg" width="108" height="108" alt="">
+              <figcaption>카메라로 열기</figcaption>
+            </figure>
           </div>
-        </article>
-
-        <div class="connector reveal">
-          <span class="line"></span> 더 나은 앱을 위한 인디 개발자 품앗이 <span class="line"></span>
-        </div>
-
-        <!-- HOTFIX -->
-        <article class="service reveal service--hotfix" style="--accent:var(--hotfix); --accent-2:var(--hotfix-2)" id="hotfix">
-          <div class="service-visual">
-            <div class="scanlines" aria-hidden="true"></div>
-            <div class="term">
-              <div class="term-bar">
-                <span class="term-dot r"></span><span class="term-dot y"></span><span class="term-dot g"></span>
-                <span class="term-title">secret_quest.sh</span>
-                <span class="term-live">● LIVE</span>
-              </div>
-              <div class="term-body">
-                <div class="term-line"><span class="prompt">hotfix@labs</span><span class="path">:~$</span> <span class="term-typed" data-text="./run_daily_quest.sh"></span><span class="term-cursor"></span></div>
-                <div class="term-out" style="margin-top:12px;">
-                  [OK] 시크릿 퀘스트 매칭 완료<br>
-                  [OK] 20명 비공개 테스터 조건 충족<br>
-                  &gt; 리워드 <b>+30 Volt</b> 지급됨
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="service-content">
-            <div class="service-badge">
-              <span class="badge-icon has-img"><img src="assets/img/hotfix-icon.png" alt="" width="30" height="30"></span>
-              HOTFIX
-              <span class="status status-beta">비공개 베타 진행중</span>
-            </div>
-            <h3>1인 개발자를 위한 품앗이 QA 플랫폼</h3>
-            <p class="desc">구글 플레이의 14일·20명 비공개 테스터 요건을, 서로의 앱을 테스트해주는 품앗이로 함께 달성합니다. 시크릿 퀘스트와 에스크로 채택제로 성의 없는 리뷰 대신 양질의 피드백만 남깁니다.</p>
-            <ul class="feature-list">
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m9 12 2 2 4-4"/></svg><span><b>시크릿 퀘스트</b>로 검증된 실사용 피드백 수집</span></li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m9 12 2 2 4-4"/></svg><span><b>에스크로 채택제</b>로 성의 있는 피드백에만 보상</span></li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m9 12 2 2 4-4"/></svg><span><b>Flutter 한 코드베이스</b>로 iOS · Android · Web 동시 지원</span></li>
-            </ul>
-            <div class="service-links">
-              <a class="btn btn-accent btn-sm" href="mailto:kaltoelabs@gmail.com?subject=%ED%95%AB%ED%94%BD%EC%8A%A4%20%EB%B2%A0%ED%83%80%20%EB%AC%B8%EC%9D%98">
-                베타 참여 문의
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
-              </a>
-            </div>
-            <div class="doc-links">
-              <a href="hotfix/privacy.html">개인정보처리방침</a>
-              <a href="hotfix/support.html">고객지원</a>
-            </div>
-          </div>
+          <a class="product-more" href="/tempo/">TEMPO 더 보기</a>
         </article>
 
       </div>
     </div>
   </section>
 
-  <!-- ================= JOURNAL / 읽을거리 ================= -->
-  <section id="journal" class="journal">
+  <section class="hotfix-lane" id="hotfix">
+    <div class="container">
+      <div class="hotfix-bar reveal">
+        <div class="hotfix-bar-copy">
+          <img src="assets/img/hotfix-icon.png" alt="" width="36" height="36">
+          <div>
+            <p class="hotfix-kicker">HOTFIX</p>
+            <h2>인디 개발자 품앗이 QA · 비공개 베타</h2>
+            <p>서로의 앱을 테스트해 더 나은 출시를 만듭니다.</p>
+          </div>
+        </div>
+        <a class="btn btn-hotfix" href="mailto:kaltoelabs@gmail.com?subject=%ED%95%AB%ED%94%BD%EC%8A%A4%20%EB%B2%A0%ED%83%80%20%EB%AC%B8%EC%9D%98">베타 참여 문의</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="journal" id="journal">
     <div class="container">
       <div class="section-head reveal">
         <p class="eyebrow">Kaltoe Journal</p>
         <h2>만들면서 든 생각들</h2>
-        <p class="section-sub">세 개의 서비스를 만들고 운영하면서 남긴 짧은 기록</p>
       </div>
       <div class="journal-grid">
-        <article class="journal-card reveal reveal-1">
+        <article class="journal-card reveal">
           <span class="journal-num">01</span>
           <span class="journal-tag">Product</span>
           <h3>왜 서비스를 셋으로 나눴을까</h3>
-          <p>할 일을 비우는 일과, 그 일을 시간 위에 배치하는 일은 서로 다른 종류의 집중을 요구했습니다. DIVE는 머릿속을 빠르게 정리하는 데, TEMPO는 그 목록을 현실적인 하루로 바꾸는 데 집중합니다. 그래서 두 앱은 따로 만들었지만, DIVE의 할 일이 TEMPO의 인박스로 자연스럽게 이어지도록 연결해뒀습니다.</p>
+          <p>비우는 일과 시간을 올리는 일은 다른 집중입니다. DIVE와 TEMPO는 따로 만들되, 할 일이 인박스로 이어지게 연결했습니다.</p>
         </article>
-        <article class="journal-card reveal reveal-2">
+        <article class="journal-card reveal reveal-1">
           <span class="journal-num">02</span>
           <span class="journal-tag">Engineering</span>
           <h3>온디바이스를 고집하는 이유</h3>
-          <p>DIVE와 TEMPO는 로그인 없이도 전체 기능을 쓸 수 있고, 데이터는 우선 기기 안 로컬 데이터베이스에 저장됩니다. 서버가 느려질 걱정도, 서비스가 사라질 걱정도 그만큼 줄어듭니다. 계정을 강제하는 대신, 필요한 사람에게만 조용히 최소한의 동기화를 제공하는 방식을 고민하고 있습니다.</p>
+          <p>로그인 없이도 핵심을 쓰고, 데이터는 먼저 기기 안에 둡니다. 필요한 사람에게만 최소한의 동기화를 엽니다.</p>
         </article>
-        <article class="journal-card reveal reveal-3">
+        <article class="journal-card reveal reveal-2">
           <span class="journal-num">03</span>
           <span class="journal-tag">Story</span>
           <h3>혼자 만들지만, 혼자 쓰지 않기 위해</h3>
-          <p>HOTFIX는 DIVE와 TEMPO를 출시하며 겪은 문제에서 시작됐습니다. 구글 플레이는 정식 출시 전 14일 동안 20명의 비공개 테스터를 요구하는데, 1인 개발자에게는 이 20명을 모으는 일 자체가 큰 장벽입니다. HOTFIX는 그 장벽을 서로의 앱을 테스트해주는 품앗이로 풀어보려는 시도입니다.</p>
+          <p>HOTFIX는 출시 전 테스터를 모으는 장벽을, 서로의 앱을 보는 품앗이로 풀어보려는 시도입니다.</p>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- ================= PHILOSOPHY ================= -->
-  <section id="philosophy" class="philosophy">
+  <section class="philosophy" id="philosophy">
     <div class="container philosophy-grid">
       <div class="reveal">
         <p class="quote">"내가 <em>매일 쓰고 싶은 도구</em>를<br>직접 만듭니다.<br>그래서 더 <em>제때 퇴근</em>할 수 있도록."</p>
-        <p class="philosophy-copy">칼퇴랩스는 얕은 집중과 끝없는 알림 속에서 하루를 흘려보내는 대신, 깊이 몰입하고 정확히 계획해서 정시에 퇴근하는 하루를 만드는 1인 개발 스튜디오입니다. 다이브·TEMPO·핫픽스는 모두 그 문제를 각자의 방식으로 풀어갑니다.</p>
+        <p class="philosophy-copy">칼퇴랩스는 깊이 몰입하고 정확히 계획해서 정시에 퇴근하는 하루를 만듭니다.</p>
       </div>
       <div class="pillars">
-        <div class="pillar reveal reveal-1">
-          <span class="num">01</span>
-          <div><h4>비우고, 몰입한다</h4><p>DIVE로 머릿속의 할 일을 빠르게 비우고, 지금 해야 할 한 가지에 깊이 집중합니다.</p></div>
-        </div>
-        <div class="pillar reveal reveal-2">
-          <span class="num">02</span>
-          <div><h4>계획은 시간 위에</h4><p>TEMPO로 할 일을 실제 시간표 위에 올려, 오늘 정말로 할 수 있는 만큼만 현실적으로 계획합니다.</p></div>
-        </div>
-        <div class="pillar reveal reveal-3">
-          <span class="num">03</span>
-          <div><h4>함께 더 나은 앱으로</h4><p>핫픽스로 다른 1인 개발자들과 서로의 앱을 다듬어주며, 혼자여도 더 좋은 제품을 만듭니다.</p></div>
-        </div>
+        <div class="pillar reveal"><span class="num">01</span><div><h4>비우고, 몰입한다</h4><p>DIVE로 머릿속을 비우고 한 가지에 잠수합니다.</p></div></div>
+        <div class="pillar reveal reveal-1"><span class="num">02</span><div><h4>계획은 시간 위에</h4><p>TEMPO로 할 일을 15분 격자 위에 붙입니다.</p></div></div>
+        <div class="pillar reveal reveal-2"><span class="num">03</span><div><h4>함께 더 나은 앱으로</h4><p>핫픽스로 다른 1인 개발자와 서로의 앱을 다듬습니다.</p></div></div>
       </div>
     </div>
   </section>
 
-  <!-- ================= CONTACT ================= -->
-  <section id="contact">
+  <section id="contact" class="contact">
     <div class="container">
       <div class="contact-card reveal">
         <p class="eyebrow">Contact</p>
         <h2>함께 만들어가고 싶다면</h2>
-        <p>베타 테스트 참여, 협업 제안, 버그 제보 무엇이든 좋습니다. 편하게 메일 주세요.</p>
+        <p>베타 참여, 협업, 버그 제보 무엇이든 메일 주세요.</p>
         <div class="contact-actions">
-          <a class="btn btn-primary" href="mailto:kaltoelabs@gmail.com">
-            이메일 보내기
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg>
-          </a>
+          <a class="btn btn-primary" href="mailto:kaltoelabs@gmail.com">이메일 보내기</a>
           <a class="btn btn-ghost" href="https://github.com/h-tkkk" target="_blank" rel="noopener">GitHub</a>
         </div>
       </div>
@@ -353,12 +254,14 @@
     <span class="brand">칼퇴랩스 <span class="brand-en">© 2026 Kaltoe Labs</span></span>
     <div class="footer-links">
       <span>사업자등록번호 754-06-03687</span>
+      <a href="/dive/">다이브</a>
+      <a href="/tempo/">TEMPO</a>
+      <a href="/hotfix/">핫픽스</a>
       <a href="dive/privacy.html">다이브 개인정보</a>
       <a href="tempo/privacy.html">TEMPO 개인정보</a>
       <a href="hotfix/privacy.html">핫픽스 개인정보</a>
       <a href="mailto:kaltoelabs@gmail.com">이메일</a>
       <a href="https://github.com/h-tkkk" target="_blank" rel="noopener">GitHub</a>
-      <a href="#home">위로</a>
     </div>
   </div>
 </footer>

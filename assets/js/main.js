@@ -1,10 +1,8 @@
-// 칼퇴랩스 — site interactions
+// 칼퇴랩스 — nav, reveal, one-time ritual snap
 (() => {
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const html = document.documentElement;
-  html.classList.add('js');
+  document.documentElement.classList.add('js');
 
-  /* ---------- scroll reveal ---------- */
   const revealEls = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window && !reduceMotion) {
     const io = new IntersectionObserver((entries) => {
@@ -14,102 +12,54 @@
           io.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+    }, { threshold: 0.12, rootMargin: '0px 0px -48px 0px' });
     revealEls.forEach((el) => io.observe(el));
   } else {
     revealEls.forEach((el) => el.classList.add('in-view'));
   }
 
-  /* ---------- nav: scrolled state + active link ---------- */
   const nav = document.getElementById('nav');
-  const onScroll = () => {
-    nav.classList.toggle('scrolled', window.scrollY > 12);
-  };
-  onScroll();
-  window.addEventListener('scroll', onScroll, { passive: true });
-
-  const navLinks = document.querySelectorAll('.nav-links a[data-nav]');
-  const sections = Array.from(navLinks)
-    .map((a) => document.querySelector(a.getAttribute('href')))
-    .filter(Boolean);
-
-  if ('IntersectionObserver' in window && sections.length) {
-    const navIo = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const id = `#${entry.target.id}`;
-          navLinks.forEach((a) => a.classList.toggle('active', a.getAttribute('href') === id));
-        }
-      });
-    }, { threshold: 0.4, rootMargin: '-30% 0px -55% 0px' });
-    sections.forEach((s) => navIo.observe(s));
+  if (nav) {
+    const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 12);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
   }
 
-  /* ---------- mobile menu ---------- */
   const toggle = document.getElementById('navToggle');
   const panel = document.getElementById('mobilePanel');
   if (toggle && panel) {
-    const closeMenu = () => { toggle.classList.remove('open'); panel.classList.remove('open'); };
+    const closeMenu = () => {
+      toggle.classList.remove('open');
+      panel.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    };
     toggle.addEventListener('click', () => {
-      toggle.classList.toggle('open');
-      panel.classList.toggle('open');
+      const open = toggle.classList.toggle('open');
+      panel.classList.toggle('open', open);
+      toggle.setAttribute('aria-expanded', String(open));
     });
     panel.querySelectorAll('a').forEach((a) => a.addEventListener('click', closeMenu));
   }
 
-  /* ---------- terminal typing effect (HOTFIX) ---------- */
-  document.querySelectorAll('.term-typed').forEach((el, idx) => {
-    const text = el.getAttribute('data-text') || '';
-    if (reduceMotion) { el.textContent = text; return; }
-    let i = 0;
-    const speed = 55;
-    const pause = 2200;
-    const tick = () => {
-      el.textContent = text.slice(0, i);
-      i += 1;
-      if (i <= text.length) {
-        setTimeout(tick, speed);
-      } else {
-        setTimeout(() => { i = 0; tick(); }, pause);
-      }
-    };
-    setTimeout(tick, 400 + idx * 150);
-  });
+  const ritual = document.getElementById('ritual');
+  if (!ritual) return;
 
-  if (reduceMotion) return;
-
-  /* ---------- cursor glow ---------- */
-  const glow = document.getElementById('cursorGlow');
-  if (glow && window.matchMedia('(hover: hover)').matches) {
-    window.addEventListener('pointermove', (e) => {
-      glow.style.setProperty('--x', `${e.clientX}px`);
-      glow.style.setProperty('--y', `${e.clientY}px`);
-    }, { passive: true });
+  const play = () => ritual.classList.add('played');
+  if (reduceMotion) {
+    play();
+    return;
   }
-
-  /* ---------- tilt on service visuals ---------- */
-  document.querySelectorAll('.service-visual').forEach((card) => {
-    const inner = card.querySelector('.mock, .mock-dive, .term');
-    if (!inner) return;
-    card.addEventListener('pointermove', (e) => {
-      const r = card.getBoundingClientRect();
-      const px = (e.clientX - r.left) / r.width - 0.5;
-      const py = (e.clientY - r.top) / r.height - 0.5;
-      inner.style.transform = `rotateX(${(-py * 10).toFixed(2)}deg) rotateY(${(px * 12).toFixed(2)}deg)`;
-    });
-    card.addEventListener('pointerleave', () => { inner.style.transform = ''; });
-    inner.style.transition = 'transform .4s cubic-bezier(.16,1,.3,1)';
-    inner.style.transformStyle = 'preserve-3d';
-  });
-
-  /* ---------- magnetic buttons ---------- */
-  document.querySelectorAll('.btn').forEach((btn) => {
-    btn.addEventListener('pointermove', (e) => {
-      const r = btn.getBoundingClientRect();
-      const x = (e.clientX - r.left - r.width / 2) * 0.25;
-      const y = (e.clientY - r.top - r.height / 2) * 0.35;
-      btn.style.transform = `translate(${x}px, ${y}px)`;
-    });
-    btn.addEventListener('pointerleave', () => { btn.style.transform = ''; });
-  });
+  if ('IntersectionObserver' in window) {
+    const rio = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          play();
+          rio.disconnect();
+        }
+      });
+    }, { threshold: 0.45 });
+    rio.observe(ritual);
+  } else {
+    play();
+  }
 })();
