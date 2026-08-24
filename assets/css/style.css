@@ -187,6 +187,38 @@ button { font: inherit; color: inherit; background: none; border: none; cursor: 
   .store-qr { display: none; }
 }
 
+/* DIVE Figma store pair: badge above 88px QR, 12px gap between columns */
+.product-card--dive .store-row,
+.page-dive .store-row {
+  gap: 12px;
+  align-items: flex-end;
+}
+.product-card--dive .store-pair,
+.page-dive .store-pair {
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.product-card--dive .store-badge img,
+.page-dive .store-badge img {
+  width: 120px;
+  height: 40px;
+}
+.product-card--dive .store-badge--play img,
+.page-dive .store-badge--play img {
+  width: 135px;
+  height: 40px;
+}
+.product-card--dive .store-qr img,
+.page-dive .store-qr img {
+  width: 88px;
+  height: 88px;
+}
+.product-card--dive .store-qr figcaption,
+.page-dive .store-qr figcaption {
+  display: none;
+}
+
 /* ---------- phone frame ---------- */
 .phone {
   --phone-w: 220px;
